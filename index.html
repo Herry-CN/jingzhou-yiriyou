@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5c241c">
+<meta name="color-scheme" content="light">
+<meta name="description" content="2026年10月3日荆州古城一日游。16人3车8位老人：车停九龙渊一整天，11:40老街坊吃饭，17:00再出库。">
+<meta property="og:title" content="荆州古城一日游 · 10月3日">
+<meta property="og:description" content="16人、3车、8位老人。11:40开饭，14:00后车不要动，17:00再出库。">
+<title>荆州古城一日游 · 10月3日</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%235c241c' width='32' height='32' rx='6'/%3E%3Cpath fill='%23f6e7c1' d='M4 22h24v3H4zM6 14h4v8H6zm8-4h4v12h-4zm8 4h4v8h-4z'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #e7dccb;
+    --paper: #f7f1e6;
+    --card: #fffdf8;
+    --ink: #241910;
+    --muted: #5e5348;
+    --line: #e5d6c4;
+    --red: #7d2b22;
+    --red-soft: #f8e8e3;
+    --gold: #f3e2c2;
+    --green: #1c5c3e;
+    --green-soft: #e5f3eb;
+    --shadow: 0 1px 0 rgba(60, 32, 16, 0.04);
+  }
+  * { box-sizing: border-box; }
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+  scroll-padding-bottom: 96px;
+}
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  body.lg { font-size: 19px; }
+  a { color: var(--red); }
+  .sheet {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--paper);
+    min-height: 100vh;
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+  .hero {
+    background:
+      radial-gradient(90% 80% at 100% 0%, rgba(212, 146, 92, 0.28), transparent 55%),
+      linear-gradient(165deg, #4e221c 0%, #6d2c24 58%, #3a241c 100%);
+    color: #f8f1e6;
+    padding: 22px 16px 18px;
+  }
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    opacity: 0.86;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.85rem;
+    line-height: 1.25;
+    font-weight: 750;
+    letter-spacing: 0.01em;
+  }
+  .lead { margin: 8px 0 0; color: rgba(248, 241, 230, 0.9); font-size: 0.98rem; }
+  .clocks {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+  .clocks li {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 244, 226, 0.2);
+    border-radius: 12px;
+    padding: 10px 6px 8px;
+    text-align: center;
+  }
+  .clocks b {
+    display: block;
+    font-size: 1.35rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .clocks span { display: block; margin-top: 4px; font-size: 0.75rem; line-height: 1.3; opacity: 0.9; }
+  .hero-call, .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 14px;
+    border: 0;
+    border-radius: 14px;
+    background: #f6e7c1;
+    color: #4a241c;
+    font: inherit;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--red);
+    border: 1.5px solid #e2c7b4;
+    min-height: 48px;
+  }
+  .topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
+  .font-btn {
+    border: 1px solid rgba(255, 244, 226, 0.35);
+    background: transparent;
+    color: #f8f1e6;
+    border-radius: 999px;
+    min-height: 36px;
+    padding: 0 12px;
+    font: inherit;
+    font-size: 0.85rem;
+  }
+  .jump {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 16px;
+    background: rgba(247, 241, 230, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    scrollbar-width: none;
+  }
+  .jump::-webkit-scrollbar { display: none; }
+  .jump a {
+    flex: 0 0 auto;
+    text-decoration: none;
+    color: #4a241c;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+  main { padding: 8px 16px 8px; }
+  section { margin: 22px 0; scroll-margin-top: 64px; }
+.num { white-space: nowrap; }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.22rem;
+    line-height: 1.35;
+    color: var(--red);
+  }
+  h3 { margin: 0 0 6px; font-size: 1.05rem; line-height: 1.4; }
+  p { margin: 0 0 10px; }
+  .status {
+    display: block;
+    background: #3f241c;
+    color: #f8f1e6;
+    text-decoration: none;
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin: 14px 0 4px;
+    font-weight: 650;
+  }
+  .card, .check, .rule, .fix, .choice, .call, .what {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+  .card { padding: 14px; margin: 10px 0; }
+  .card p:last-child { margin-bottom: 0; }
+  .rules { display: flex; flex-direction: column; gap: 8px; }
+  .rule {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #f0d2cb;
+    background: var(--red-soft);
+  }
+  .rule i {
+    font-style: normal;
+    font-weight: 800;
+    color: var(--red);
+    font-variant-numeric: tabular-nums;
+  }
+  .rule b { display: block; }
+  .rule span { display: block; color: var(--muted); font-size: 0.92rem; }
+  .checks { display: flex; flex-direction: column; gap: 8px; }
+  .check {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    margin: 0;
+  }
+  .check input {
+    width: 22px;
+    height: 22px;
+    margin-top: 3px;
+    accent-color: var(--red);
+    flex: 0 0 auto;
+  }
+  .check small { display: block; color: var(--muted); }
+  .fixes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .fix { padding: 12px; }
+  .fix b { display: block; color: var(--red); font-size: 0.92rem; }
+  .fix p { margin: 4px 0 0; font-size: 0.95rem; }
+  .tl { list-style: none; margin: 0; padding: 0; }
+  .tl li {
+    display: grid;
+    grid-template-columns: 4.6rem 1fr;
+    gap: 8px;
+  }
+  .when b, .when span { display: block; }
+  .when b {
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+  }
+  .when span { color: var(--muted); font-size: 0.75rem; margin-top: 2px; }
+  .what {
+    position: relative;
+    border-left: 2px solid #e4d0c0;
+    margin-left: 4px;
+    padding: 0 0 16px 14px;
+  }
+  .what::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--red);
+    border: 2px solid var(--paper);
+    position: absolute;
+    left: -7px;
+    top: 4px;
+  }
+  .tl li.is-now .what {
+    background: #fff6ee;
+    border-radius: 0 14px 14px 0;
+    padding-top: 8px;
+    padding-right: 10px;
+  }
+  .tl li.is-now .what::before { box-shadow: 0 0 0 4px rgba(125, 43, 34, 0.18); }
+  .flag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--red);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    vertical-align: 1px;
+  }
+  .flag.soft { background: var(--gold); color: #6a4512; }
+  .flag.ok { background: var(--green-soft); color: var(--green); }
+  .choice { padding: 14px; margin: 8px 0; }
+  .choice .tag {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 750;
+    color: var(--green);
+  }
+  .choice.alt .tag { color: #8a5a12; }
+  .call {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid #f0d2cb;
+  }
+  .call strong {
+    display: block;
+    color: var(--red);
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+  .call small { color: var(--muted); }
+  .mini { color: var(--muted); font-size: 0.92rem; }
+  .brief {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 0;
+  }
+  details {
+    background: var(--card);
+    border-radius: 14px;
+    margin: 10px 0;
+    padding: 4px 14px;
+  }
+  summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  details p, details li { font-size: 0.98rem; }
+  details ul { margin: 0 0 12px; padding-left: 1.15rem; }
+  .dock {
+    position: fixed;
+    z-index: 30;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(640px, 100%);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 6px;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    background: rgba(255, 253, 248, 0.96);
+    border-top: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+  }
+  .dock a {
+    text-decoration: none;
+    text-align: center;
+    color: #4a241c;
+    background: var(--paper);
+    border-radius: 12px;
+    min-height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 750;
+    font-size: 0.92rem;
+    line-height: 1.15;
+  }
+  .dock a.primary { background: #7d2b22; color: #fffdf8; }
+  .dock small { display: block; font-weight: 550; font-size: 0.68rem; opacity: 0.8; margin-top: 2px; }
+  .src { font-size: 0.86rem; color: var(--muted); }
+  .src a { color: #2458a6; }
+  @media (max-width: 360px) {
+    .fixes { grid-template-columns: 1fr; }
+    .tl li { grid-template-columns: 1fr; gap: 2px; }
+    .when { display: flex; gap: 8px; align-items: baseline; }
+    .what { margin-left: 0; }
+  }
+  @media (min-width: 800px) {
+    body { padding: 18px 0; }
+    .sheet { border-radius: 18px; overflow: hidden; min-height: calc(100vh - 36px); }
+  }
+  @media print {
+    body { background: #fff; }
+    .sheet { max-width: none; box-shadow: none; padding-bottom: 0; }
+    .jump, .dock, .font-btn, .btn { display: none !important; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="hero">
+    <div class="topbar">
+      <button type="button" class="font-btn" id="fontToggle" aria-pressed="false">大字</button>
+    </div>
+    <p class="eyebrow">2026年10月3日 · 国庆 · 小雨 16–19°C</p>
+    <h1>荆州古城一日游</h1>
+    <p class="lead">16 人 · 3 车 · 8 位老人<br>上午停好车，人在东门走路，17:00 再开。</p>
+    <ul class="clocks">
+      <li><b>11:40</b><span>坐下吃饭</span></li>
+      <li><b>14:00</b><span>封路，车别动</span></li>
+      <li><b>17:00</b><span>才能出库</span></li>
+    </ul>
+    <a class="hero-call" href="tel:07168260388">现在订餐 0716-8260388</a>
+  </header>
+
+  <nav class="jump" aria-label="章节">
+    <a href="#tonight">今晚</a>
+    <a href="#plan">时刻表</a>
+    <a href="#drive">停车</a>
+    <a href="#eat">午饭</a>
+    <a href="#pack">随身</a>
+    <a href="#phone">电话</a>
+  </nav>
+
+  <main>
+    <a class="status" id="status" href="#tonight">今晚先订包间。打不通就发短信，明早 8:30 再打。</a>
+
+    <section id="tonight">
+      <h2>今晚做完这四件</h2>
+      <p>明天就是 10 月 3 日。餐厅营业到 21:00，现在还能打。</p>
+      <div class="checks">
+        <label class="check"><input type="checkbox" id="t1"><span>打电话订明天 11:40、16 人、一个包间两桌。说明有 8 位老人，要鱼糕、汤和蒸菜，少油少辣。<small>老街坊饭庄 · 张居正街 18 号 · <span class="num">0716-8260388</span></small></span></label>
+        <label class="check"><input type="checkbox" id="t2"><span>三辆车写好谁开、哪几位老人坐哪辆。地库里靠这个找人，不靠临时喊。<small>定一位清点的人，每个转场数到 16。</small></span></label>
+        <label class="check"><input type="checkbox" id="t3"><span>8 张身份证原件放进一个袋子，交给一位年轻人。有老年证的一起带上。<small>只带手机照片，窗口可能不认。</small></span></label>
+        <label class="check"><input type="checkbox" id="t4"><span>每人一件带帽雨衣、一双防滑鞋。药、干袜子、保温杯放进随车的包。<small>城墙上风大，伞容易翻。下雨优先穿雨衣。</small></span></label>
+      </div>
+      <div class="card">
+        <h3>照着这段说</h3>
+        <p id="book-script">您好，订明天 10 月 3 日中午 11:40，16 位，8 位是老人。想要一个包间、两桌。菜软一点：鱼糕、藕汤或鸡汤、蒸蛋、少油少辣。车不进张居正街，人从东门走过去。请问还能订吗？</p>
+        <button type="button" class="btn ghost" id="copyBook" data-copy="book-script">复制这段话</button>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>原钟点哪里不合适</h2>
+      <p>路线可以留：上午城墙，中午张居正街，下午不挪车。钟点要改，有两处会误事。</p>
+      <div class="fixes">
+        <article class="fix"><b>停车</b><p>15 分钟改为 30 分钟。3 辆车加 8 位老人，出地库没那么快。</p></article>
+        <article class="fix"><b>午饭</b><p>80 分钟改为 90 分钟，饭后再坐 25 分钟。16 人等菜、上厕所、吃药都算上。</p></article>
+        <article class="fix"><b>故居</b><p>50 分钟改为 70 分钟。饭庄就在隔壁，不用赶路。</p></article>
+        <article class="fix"><b>关帝庙</b><p>全员 40 分钟不够。离故居不到 1 公里，雨天单程约 20 分钟，来回加参观要 70 分钟。</p></article>
+        <article class="fix"><b>取车</b><p>16:50 改到 17:00 点火。东环路 14:00–17:00 禁行，提前到了车也出不去。</p></article>
+        <article class="fix"><b>停车费</b><p>九龙渊不在公布的 10 个免费停车场里。位置仍最合适，进场按屏幕缴费。</p></article>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2>明天就按这张表走</h2>
+      <p>三个时间不要让：11:40 开饭，14:00 后车不动，16:40 人到地库、17:00 开车。城墙和故居累了就可以缩短。</p>
+      <ol class="tl">
+        <li id="slot-park" data-start="09:30" data-end="10:00">
+          <div class="when"><b>09:30</b><span>30分</span></div>
+          <div class="what">
+            <h3>三辆车停进九龙渊 <span class="flag soft">已加长</span></h3>
+            <p>导航「九龙渊地下停车场」，东环路 19 号。停好后拍柱子编号发到群里，人在出口汇合。</p>
+            <p class="mini">这一段路 14:00 才封，上午进得去。进场看计费屏，它不在免费名单里。</p>
+          </div>
+        </li>
+        <li id="slot-wall" data-start="10:00" data-end="11:15">
+          <div class="when"><b>10:00</b><span>75分</span></div>
+          <div class="what">
+            <h3>宾阳楼，少走路</h3>
+            <p>优先坐电梯上城楼，城墙上慢慢走 20 分钟就停。地滑、风大，穿雨衣，双手可以扶着。</p>
+            <p class="mini">想坐环城观光车就上午坐。以前票价 40 元，节假日大约 10 分钟一班，末班 17:00，以上车处为准。11:05 前在东门下车。</p>
+          </div>
+        </li>
+        <li id="slot-walk" data-start="11:15" data-end="11:40">
+          <div class="when"><b>11:15</b><span>25分</span></div>
+          <div class="what">
+            <h3>走到老街坊</h3>
+            <p>年轻人这条路大约 12 分钟，8 位老人小雨按 25 分钟走。走丢了在饭庄门口等，不要折返找人。</p>
+          </div>
+        </li>
+        <li id="slot-lunch" data-start="11:40" data-end="13:10">
+          <div class="when"><b>11:40</b><span>90分</span></div>
+          <div class="what">
+            <h3>16 人午饭 <span class="flag">准点</span></h3>
+            <p>老街坊饭庄，张居正街 18 号。两桌，每桌都要有软菜。清点的人数到 16 再入座。</p>
+          </div>
+        </li>
+        <li id="slot-rest" data-start="13:10" data-end="13:35">
+          <div class="when"><b>13:10</b><span>25分</span></div>
+          <div class="what">
+            <h3>先坐着，再出门</h3>
+            <p>厕所、吃药、换干袜子都在包间解决。雨若变大，就在这里多坐，故居可以缩短。</p>
+          </div>
+        </li>
+        <li id="slot-house" data-start="13:35" data-end="14:45">
+          <div class="when"><b>13:35</b><span>70分</span></div>
+          <div class="what">
+            <h3>张居正故居 <span class="flag soft">已加长</span></h3>
+            <p>出饭庄就能走到。院子平，适合慢走。70 分钟够看完，不必走满两小时。</p>
+            <p class="mini">开放时间各处说法不一，都覆盖这个下午时段。不放心就打 0716-8450389。</p>
+          </div>
+        </li>
+        <li id="slot-split" data-start="14:45" data-end="16:20">
+          <div class="when"><b>14:45</b><span>95分</span></div>
+          <div class="what">
+            <h3>老人留在东门</h3>
+            <p>这段空着是故意的。上午加午饭已经走了 4 小时，再把 8 位老人拖去南门，17:00 会有人掉队。</p>
+            <p class="mini">休息就在东门座椅、城墙避雨处，或回故居坐。腿脚好的人可以单独去关帝庙，不能再加三义街。</p>
+          </div>
+        </li>
+        <li id="slot-wait" data-start="16:20" data-end="17:00">
+          <div class="when"><b>16:20</b><span>40分</span></div>
+          <div class="what">
+            <h3>人先进地库 <span class="flag">硬性</span></h3>
+            <p>16:20 从东门往九龙渊走，16:40 电梯或出口见齐。少一个人就打电话，车在 17:00 前不能开出去找人。</p>
+            <p class="mini">在地库里等。不要站在露天坡道上。</p>
+          </div>
+        </li>
+        <li id="slot-go" data-start="17:00" data-end="17:20">
+          <div class="when"><b>17:00</b><span>20分</span></div>
+          <div class="what">
+            <h3>出库离开 <span class="flag">硬性</span></h3>
+            <p>17:00 路一开就走。导航先离开古城：荆沙大道、武德路、郢都路、人民路都可以。</p>
+            <p class="mini">晚饭不要留在古城。五一路 17:30 起可能按客流封路，碧波路 16:30 已经不让走。人在雨里，不要为了抢这一分钟加速。</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3 style="margin-top:8px">14:45 之后怎么分组</h3>
+      <article class="choice">
+        <span class="tag">老人，8 位都留在这里</span>
+        <h3>东门休息</h3>
+        <p>坐下、喝热水、少走动。雨停了可以再上城墙看一眼，16:20 前往地库走。</p>
+      </article>
+      <article class="choice alt">
+        <span class="tag">只有走得动的人，二选一</span>
+        <h3>关帝庙，或直接休息</h3>
+        <p>关帝庙在老南门内。14:50 出发，15:40 往回走，16:15 前回到东门。参观大约 25 分钟，不要加三义街。</p>
+        <p class="mini">2024 年检查时这里缺无障碍通道。轮椅和腿脚不便的人留在东门，不要假设已经改好。</p>
+      </article>
+    </section>
+
+    <section id="drive">
+      <h2>车怎么停，怎么走</h2>
+      <div class="card">
+        <h3>首选：九龙渊地下停车场</h3>
+        <p>东环路 19 号，大约 386 个泊位，下雨能直接进地库，离宾阳楼近。三辆车停同一处，全天不挪。</p>
+        <p>它不在城发公布的 10 个免费场里。假期免费的是道路泊位，以及仁心广场、内环北路、小北门、西林湾等 10 个场。九龙渊进场看屏幕缴费，不要为了找免费场在东门转圈。</p>
+        <a class="btn" href="https://uri.amap.com/search?keyword=%E4%B9%9D%E9%BE%99%E6%B8%8A%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BD%A6%E5%9C%BA&amp;city=%E8%8D%86%E5%B7%9E&amp;src=jingzhou&amp;callnative=1">高德导航到九龙渊</a>
+      </div>
+      <div class="card">
+        <h3>九龙渊满了</h3>
+        <p>改停古城东门景区停车场，或明月公园游客中心。仍然停在东门，14:00 后一样不能挪。</p>
+        <p>内环北路停车场在免费名单里，约 62 个位，离宾阳楼近。国庆早上很容易满，满了就回九龙渊。</p>
+      </div>
+      <div class="rule">
+        <i>14:00</i>
+        <div>
+          <b>到 17:00，东边这三条路不让通车</b>
+          <span>江津西路（武德路至东环路）、荆南路（东环路至黄金堂路）、东环路（北京西路至荆沙大道）。九龙渊就在这段东环路上。</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>有人必须提前走</h3>
+        <p>那一辆车从早上就停小北门，荆北路 8 号，免费，不在这三条封路里。人再坐观光车或步行汇合。不要把这辆车停进九龙渊。</p>
+        <a class="btn ghost" href="https://uri.amap.com/search?keyword=%E5%B0%8F%E5%8C%97%E9%97%A8%E5%81%9C%E8%BD%A6%E5%9C%BA&amp;city=%E8%8D%86%E5%B7%9E&amp;src=jingzhou&amp;callnative=1">导航到小北门停车场</a>
+      </div>
+      <div class="card">
+        <h3>17:00 出库后的路</h3>
+        <p>先上荆沙大道、武德路、郢都路或人民路。碧波路（园林路至塔桥路）16:30–21:00 不让走。五一路 17:30–21:30 可能封，解放路相关路段也会看人流临时改行人街，具体以路口交警为准。</p>
+        <p class="mini">回程如果本来就要穿五一路，17:25 前通过。如果导航可以绕到荆沙大道，就绕，不必在雨里抢秒。</p>
+      </div>
+      <details>
+        <summary>想看博物馆的那一辆车</summary>
+        <p>只有确实想看文物，才拆出一辆车。另外两辆仍在 9:30 停九龙渊。</p>
+        <ul>
+          <li>9:30 直接去荆州博物馆，大约 9:50 入馆。</li>
+          <li>11:00 必须出来。只看精品，不求一次看完。</li>
+          <li>11:25 前停回九龙渊或东门停车场，人走路去老街坊，11:40 入座。</li>
+          <li>吃完饭不要再挪这辆车。14:00 一到就出不去。</li>
+        </ul>
+        <p>个人参观免预约，刷身份证或支付宝。16 人如果被当成旅行社团队，先打 0716-8494574。这一辆车只有 4–6 人，一般按个人进。</p>
+      </details>
+    </section>
+
+    <section id="eat">
+      <h2>午饭</h2>
+      <a class="call" href="tel:07168260388">
+        <span>老街坊饭庄 · 张居正街 18 号</span>
+        <strong>0716-8260388</strong>
+        <small>11:00–21:00 · 明天 11:40 · 16 人两桌</small>
+      </a>
+      <div class="card">
+        <h3>每桌都要点的</h3>
+        <p>鱼糕、藕汤或砂锅鸡汤、粉蒸肉或肉沫蒸蛋、一份清炒青菜、一份软主食。鱼糕给牙口不好的人。</p>
+        <p class="mini">如果是火锅，老人单独一个清汤。油炸的浅尝即可。</p>
+      </div>
+      <div class="card">
+        <h3>这家订不上</h3>
+        <p>改东门的古城味道。停车场大，菜偏重，点的时候单独要蒸菜和清汤。电话没查到，明早 9:00 前到店问 16 人的位子。</p>
+        <p>荃凤雅宴已经注销，不要去。内环北路的味道餐厅门口车曾经进不去，明天不要把午饭押在那里。</p>
+      </div>
+      <a class="btn ghost" href="https://uri.amap.com/search?keyword=%E8%80%81%E8%A1%97%E5%9D%8A%E9%A5%AD%E5%BA%84%E5%BC%A0%E5%B1%85%E6%AD%A3%E8%A1%97&amp;city=%E8%8D%86%E5%B7%9E&amp;src=jingzhou&amp;callnative=1">导航到老街坊</a>
+    </section>
+
+    <section id="pack">
+      <h2>明天身上带什么</h2>
+      <p>小雨转多云，16–19°C，北风不到 3 级，湿度高，体感比温度更凉。日落 18:15，出发时天还亮，回到半路会天黑，雨天把车距拉开。</p>
+      <div class="checks">
+        <label class="check"><input type="checkbox" id="p1"><span>身份证原件，有老年证也带上</span></label>
+        <label class="check"><input type="checkbox" id="p2"><span>带帽雨衣，城墙上收起伞</span></label>
+        <label class="check"><input type="checkbox" id="p3"><span>防滑鞋、干袜子</span></label>
+        <label class="check"><input type="checkbox" id="p4"><span>平时吃的药。胸闷、头晕就停下，必要时打 120</span></label>
+        <label class="check"><input type="checkbox" id="p5"><span>保温杯。景区服务点一般有热水</span></label>
+      </div>
+      <div class="card">
+        <h3>门票怎么准备</h3>
+        <p>70 岁及以上通常免首道门票，60–69 岁通常半价。窗口当天公示如果更优惠，按公示走。两种证件都带，避免只带一种进不去。</p>
+        <p class="mini">荆州户籍登城墙凭身份证免票；外地游客登上宾阳楼需要买票，不登城可以不买。票价窗口为准。张居正故居成人票大约 20 元一档，各平台标价不完全一样。</p>
+      </div>
+    </section>
+
+    <section id="phone">
+      <h2>电话</h2>
+      <a class="call" href="tel:07168260388"><span>订午饭 · 老街坊</span><strong>0716-8260388</strong><small>今晚打，明早 8:30 再确认</small></a>
+      <a class="call" href="tel:07168450389"><span>张居正故居</span><strong>0716-8450389</strong><small>问明天是否正常开放</small></a>
+      <a class="call" href="tel:07168494574"><span>博物馆无障碍、团队预约</span><strong>0716-8494574</strong><small>只有上午那辆车需要</small></a>
+      <a class="call" href="tel:12345"><span>旅游投诉</span><strong>12345</strong><small>加价、毁约可以打。紧急情况同时打 120</small></a>
+      <a class="call" href="tel:120"><span>身体不适</span><strong>120</strong></a>
+      <a class="call" href="tel:02796122"><span>返程高速</span><strong>027-96122</strong><small>荆州长江大桥假期应急车道开放，按现场标牌走</small></a>
+      <div class="card">
+        <p>找车位：微信搜「荆州城管」→ 私信 → 公众服务 → 找停车场 → 节假日免费。</p>
+        <p class="mini" style="margin:0">东门如果有交警指挥，听交警的，导航可能还指着封路。</p>
+      </div>
+    </section>
+
+    <section id="skip">
+      <h2>今天不要排进去</h2>
+      <div class="card">
+        <p><b>关帝庙全员去。</b>来回时间不够，留给出门仍有余力的人。</p>
+        <p><b>三义街、园博园。</b>一个在城西，一个在纪南，8 小时里塞进去，17:00 的车会有人赶不上。</p>
+        <p><b>市图书馆古籍。</b>在沙北新区荆沙大道 222 号，和东门不是一条步行线，节假日 16:00 闭馆。荆州没有名叫「荆州古籍」的景区。</p>
+        <p style="margin:0"><b>荃凤雅宴。</b>店已注销。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>发到家庭群</h2>
+      <pre class="brief" id="brief">荆州 10月3日
+9:30 九龙渊地库停车，全天不挪车（不在免费名单，看屏幕缴费）
+10:00 宾阳楼，老人少走，观光车只上午坐
+11:40 老街坊午饭，张居正街18号，0716-8260388
+13:35 张居正故居
+14:45 老人留东门；去关帝庙的 16:15 前回来
+16:40 地库出口集合，17:00 才开车
+走荆沙大道或武德路，不走五一路和碧波路
+带：身份证、老年证、雨衣、防滑鞋、药</pre>
+      <button type="button" class="btn ghost" id="copyBrief" data-copy="brief">复制这段行程</button>
+    </section>
+
+    <section>
+      <h2>这张表怎么估的</h2>
+      <details open>
+        <summary>步行和吃饭的算法</summary>
+        <ul>
+          <li>年轻人 12 分钟的路，8 位老人遇小雨按 20–25 分钟。</li>
+          <li>16 人用餐按 90 分钟，含等菜和结账。</li>
+          <li>故居资料常写 1–2 小时。取 70 分钟，因为就在饭庄旁边，也给下午留出集合时间。</li>
+          <li>关帝庙与故居相隔不到 1 公里。单程按 20 分钟，参观 25 分钟，来回约 70 分钟，所以不放进全员主线。</li>
+          <li>东环路 17:00 才允许通车，所以人 16:40 到齐，车 17:00 再动。</li>
+        </ul>
+      </details>
+      <details>
+        <summary>管制与免费停车原文</summary>
+        <p>荆州交警 2026 年 9 月 22 日通告：10 月 1 日至 3 日每天 14:00–17:00，江津西路（武德路至东环路）、荆南路（东环路至黄金堂路）、东环路（北京西路至荆沙大道）禁止车辆通行。绕行荆沙大道、武德路、郢都路、人民路。</p>
+        <p>同通告：碧波路 9 月 30 日至 10 月 3 日每天 16:30–21:00 禁行。五一路 10 月 1 日至 6 日每天 17:30–21:30 管制，具体开始时间看当天客流；解放路相关路段适时改为只允许行人。</p>
+        <p>荆州停车：9 月 25 日 0:00 至 10 月 7 日 24:00，中心城区道路泊位和 10 个自营停车场免费。名单里有内环北路、小北门、西林湾，没有九龙渊。</p>
+        <p class="src">
+          <a href="https://c.m.163.com/news/a/L7GJNMEB051495RL.html">管制通告</a>
+          ·
+          <a href="http://c.m.163.com/news/a/L7I2LFBD051495RL.html">免费停车名单</a>
+        </p>
+        <p class="src">路口若有交警，以现场指挥为准。景区票价和开放时间以窗口当天公示为准。</p>
+      </details>
+    </section>
+  </main>
+
+  <nav class="dock" aria-label="快捷操作">
+    <a class="primary" href="tel:07168260388">订餐<small>0716-8260388</small></a>
+    <a href="https://uri.amap.com/search?keyword=%E4%B9%9D%E9%BE%99%E6%B8%8A%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BD%A6%E5%9C%BA&amp;city=%E8%8D%86%E5%B7%9E&amp;src=jingzhou&amp;callnative=1">导航<small>九龙渊</small></a>
+    <a href="#plan">时刻表<small>明天</small></a>
+  </nav>
+</div>
+<script>
+(function () {
+  var fontBtn = document.getElementById('fontToggle');
+  if (localStorage.getItem('jz-lg') === '1') {
+    document.body.classList.add('lg');
+    fontBtn.setAttribute('aria-pressed', 'true');
+  }
+  fontBtn.addEventListener('click', function () {
+    var on = document.body.classList.toggle('lg');
+    fontBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    localStorage.setItem('jz-lg', on ? '1' : '0');
+  });
+
+  document.querySelectorAll('input[type="checkbox"][id]').forEach(function (box) {
+    var key = 'jz-' + box.id;
+    if (localStorage.getItem(key) === '1') box.checked = true;
+    box.addEventListener('change', function () {
+      localStorage.setItem(key, box.checked ? '1' : '0');
+    });
+  });
+
+  function copyText(text) {
+    function legacy() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '0';
+      ta.style.left = '0';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      return ok ? Promise.resolve() : Promise.reject();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).catch(legacy);
+    }
+    return legacy();
+  }
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy'));
+      var text = (el.innerText || '').trim();
+      var original = btn.textContent;
+      copyText(text).then(function () {
+        btn.textContent = '已复制';
+        setTimeout(function () { btn.textContent = original; }, 1800);
+      }).catch(function () {
+        btn.textContent = '请长按上面的文字复制';
+        setTimeout(function () { btn.textContent = original; }, 1800);
+      });
+    });
+  });
+
+  var parts = {};
+  new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  }).formatToParts(new Date()).forEach(function (p) { parts[p.type] = p.value; });
+
+  var day = parts.year + '-' + parts.month + '-' + parts.day;
+  var nowMin = parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10);
+  var status = document.getElementById('status');
+  if (day !== '2026-10-03') return;
+
+  var slots = Array.prototype.slice.call(document.querySelectorAll('.tl li'));
+  var current = null;
+  slots.forEach(function (li) {
+    var a = li.getAttribute('data-start').split(':');
+    var b = li.getAttribute('data-end').split(':');
+    var start = parseInt(a[0], 10) * 60 + parseInt(a[1], 10);
+    var end = parseInt(b[0], 10) * 60 + parseInt(b[1], 10);
+    if (nowMin >= start && nowMin < end) current = li;
+  });
+
+  if (nowMin < 9 * 60 + 30) {
+    status.textContent = '还没到 9:30。先对一遍三辆车的人、身份证和雨衣。';
+    status.href = '#tonight';
+  } else if (current) {
+    current.classList.add('is-now');
+    var title = current.querySelector('h3').childNodes[0].textContent.trim();
+    status.textContent = '现在：' + title;
+    status.href = '#' + current.id;
+  } else {
+    status.textContent = '该在回程路上了。走荆沙大道或武德路，不进五一路和碧波路。';
+    status.href = '#slot-go';
+  }
+})();
+</script>
+</body>
+</html>
